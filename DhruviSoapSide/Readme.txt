@@ -31,4 +31,5 @@ Completed part -1 succefully run.
  Changed the name syntax in the display-Product Name and Brand Name, by adding Schema
  Commiting changes to Git.
 
+2:23pm Started part-7 Adding search.
 
