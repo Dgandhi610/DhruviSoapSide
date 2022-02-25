@@ -19,3 +19,16 @@ Completed part -1 succefully run.
  took a break. /// And createda git repo. The main step I forgot due to solving a error and crating a new app. 
 
  Made git repo. and commited changes. 
+
+ *******Databse Part!*******
+ 25th- 1:30pm completed creating a database, added values, and completed part-5 succesfully!!! yay!!
+ Run the app, And phewww! i got the output.
+ 
+ 2:00pm Started part-6
+
+ Adding controllers sections,
+
+ Changed the name syntax in the display-Product Name and Brand Name, by adding Schema
+ Commiting changes to Git.
+
+
