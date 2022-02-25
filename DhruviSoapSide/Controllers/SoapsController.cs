@@ -20,9 +20,17 @@ namespace DhruviSoapSide.Controllers
         }
 
         // GET: Soaps
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string searchString)
         {
-            return View(await _context.Soaps.ToListAsync());
+            var Soaps = from m in _context.Soaps
+                         select m;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                Soaps = Soaps.Where(s => s.ProductName.Contains(searchString));
+            }
+
+            return View(await Soaps.ToListAsync());
         }
 
         // GET: Soaps/Details/5

@@ -33,3 +33,5 @@ Completed part -1 succefully run.
 
 2:23pm Started part-7 Adding search.
 
+3:30- completed part-7 search 
+Also, created About Us page displaying brief description about the company. Created AboutUs.cshtml file in Home folder. linked it in layout.cshtml file.  
