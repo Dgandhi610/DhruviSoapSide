@@ -1,4 +1,6 @@
-﻿@model IEnumerable<DhruviSoapSide.Models.Soaps>
+﻿
+@model DhruviSoapSide.Models.SoapBrandNameViewModel
+
 
 @{
     ViewData["Title"] = "Index";
@@ -9,70 +11,76 @@
 <p>
     <a asp-action="Create">Create New</a>
 </p>
-<form asp-controller="Soaps" asp-action="Index">
+<form asp-controller="Soaps" asp-action="Index" method="get">
     <p>
-        Title: <input type="text" name="SearchString" />
+        <select asp-for="SoapBrand" asp-items="Model.BrandName">
+            <option value="">All</option>
+        </select>
+
+        Product Name: <input type="text" asp-for="SearchString" />
         <input type="submit" value="Filter" />
     </p>
 </form>
+
 
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.ProductName)
+                @Html.DisplayNameFor(model => model.Soaps[0].ProductName)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Aroma)
+                @Html.DisplayNameFor(model => model.Soaps[0].Aroma)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Shape)
+                @Html.DisplayNameFor(model => model.Soaps[0].Shape)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Quality)
+                @Html.DisplayNameFor(model => model.Soaps[0].Quality)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.BrandName)
+                @Html.DisplayNameFor(model => model.Soaps[0].BrandName)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Weight)
+                @Html.DisplayNameFor(model => model.Soaps[0].Weight)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Price)
+                @Html.DisplayNameFor(model => model.Soaps[0].Price)
             </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.ProductName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Aroma)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Shape)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Quality)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.BrandName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Weight)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Price)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model.Soaps)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProductName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Aroma)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Shape)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Quality)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BrandName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Weight)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

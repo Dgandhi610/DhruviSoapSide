@@ -20,21 +20,37 @@ namespace DhruviSoapSide.Controllers
         }
 
         // GET: Soaps
-        public async Task<IActionResult> Index(string searchString)
+        public async Task<IActionResult> Index(string SoapBrand, string searchString)
         {
+            // Use LINQ to get list of genres.
+            IQueryable<string> genreQuery = from m in _context.Soaps
+                                            orderby m.BrandName
+                                            select m.BrandName;
+
             var Soaps = from m in _context.Soaps
                          select m;
 
-            if (!String.IsNullOrEmpty(searchString))
+            if (!string.IsNullOrEmpty(searchString))
             {
                 Soaps = Soaps.Where(s => s.ProductName.Contains(searchString));
             }
 
-            return View(await Soaps.ToListAsync());
+            if (!string.IsNullOrEmpty(SoapBrand))
+            {
+                Soaps = Soaps.Where(x => x.BrandName == SoapBrand);
+            }
+
+            var SoapBrandVM = new SoapBrandNameViewModel
+            {
+                BrandName = new SelectList(await genreQuery.Distinct().ToListAsync()),
+                Soaps = await Soaps.ToListAsync()
+            };
+
+            return View(SoapBrandVM);
         }
 
-        // GET: Soaps/Details/5
-        public async Task<IActionResult> Details(int? id)
+            // GET: Soaps/Details/5
+            public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
             {
