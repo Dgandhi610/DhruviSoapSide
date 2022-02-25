@@ -3,3 +3,19 @@
 I started craeting the project on 24th morning 11am. I created the project, added git repo, completed 3 steps successfully,  but encountered a nuget manager package eoor. 
 
 I couldn't install the package and faced errors. I then deleted the project and restarted the whole project.
+
+I started a new project on 24th night.
+Completed part -1 succefully run.
+
+11:00pm- Completed part 2(added controllers to the app)
+
+11:15pm started part 3 added View, made changes to the layout page.
+
+11:45pm started part 4... faced the same erroe again. Nuget manager installation. Tried installing other packages version 5.0.14
+ SUccessfully Installed. 
+ phewwwwwww!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Finally solved. 
+
+
+ took a break. /// And createda git repo. The main step I forgot due to solving a error and crating a new app. 
+
+ Made git repo. and commited changes. 
