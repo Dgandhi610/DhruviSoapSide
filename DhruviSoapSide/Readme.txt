@@ -41,4 +41,14 @@ adding search by productName and brandName
 As I have already added the field while seeding database, for Quality, I did not need to create one for rating. 
 
 I skipped that part and started part-9
+examined the following mentioned in part-9&10.!!!!!
+
+
+{Finally done with the Tutorial!}
+
+
+
+
+Working on CSS!
+
 
