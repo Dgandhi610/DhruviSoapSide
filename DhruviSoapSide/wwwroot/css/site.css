@@ -5,11 +5,14 @@ a.navbar-brand {
   white-space: normal;
   text-align: center;
   word-break: break-all;
+  background-color: lavenderblush;
+  color: white;
+  font-size: larger;
 }
 
 /* Provide sufficient contrast against white background */
 a {
-  color: #0366d6;
+  color: coral;
 }
 
 .btn-primary {
@@ -19,9 +22,9 @@ a {
 }
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+  color: white;
+  background-color: lightcoral;
+  border-color: black;
 }
 
 /* Sticky footer styles
@@ -46,6 +49,7 @@ html {
   box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
 }
 
+
 button.accept-policy {
   font-size: 1rem;
   line-height: inherit;
@@ -61,6 +65,8 @@ html {
 body {
   /* Margin bottom by footer height */
   margin-bottom: 60px;
+  background-color: lavender;
+  
 }
 .footer {
   position: absolute;
