@@ -35,3 +35,10 @@ Completed part -1 succefully run.
 
 3:30- completed part-7 search 
 Also, created About Us page displaying brief description about the company. Created AboutUs.cshtml file in Home folder. linked it in layout.cshtml file.  
+adding search by productName and brandName
+
+6:56 startng part-8
+As I have already added the field while seeding database, for Quality, I did not need to create one for rating. 
+
+I skipped that part and started part-9
+
